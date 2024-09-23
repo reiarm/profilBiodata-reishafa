@@ -24,7 +24,13 @@ main {
 header {
     background-color: #2A4494;
     color: white;
-    padding: 20px 0;
+    padding: 10px 0;
+}
+
+footer {
+    background-color: #9E2B25;
+    color: white;
+    padding: 10px 0;
 }
 
 /* Profile Section */
@@ -34,50 +40,16 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
     margin: 10px;
-    max-width: 90%; /* Ukuran default untuk mobile */
-}
-
-.social-links {
-    text-align: center;
-    margin-top: 20px; /* Jarak antara info profil dan sosial links */
-}
-
-.social-links ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Jarak antar logo */
-}
-
-.social-links a {
-    display: inline-block; /* Agar logo dapat di-hover */
-    transition: transform 0.2s; /* Efek zoom saat di-hover */
-}
-
-.social-links a:hover {
-    transform: scale(1.1); /* Membesarkan logo saat di-hover */
-}
-
-.social-links img {
-    width: 30px; /* Ukuran logo */
-    height: 30px;
-    transition: filter 0.3s; /* Transisi untuk efek filter */
-}
-
-/* Efek hover pada gambar */
-.social-links a:hover img {
-    filter: brightness(0.8); /* Mengubah warna saat di-hover */
+    max-width: 90%;
 }
 
 .profile-section {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-/* Gambar profil */
 .profile-picture img {
     width: 200px;
     height: 200px;
@@ -85,52 +57,76 @@ header {
     border: 5px solid #f3aa51;
 }
 
-/* Info Profil */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #333;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    color: #2A4494;
+}
+
 .profile-info {
-    text-align: left;
+    text-align: center;
     align-content: center;
     max-width: 400px;
 }
 
 .profile-info h2 {
     margin: 10px 0;
-    font-size: 24px; /* Ukuran teks yang konsisten */
+    font-size: 24px;
     color: #333;
-    text-align: center;
 }
 
 .profile-info p {
-    margin: 5px 0; /* Konsisten pada margin */
+    align-content: center;
+    text-align: left;
+    margin: 10px 0;
     font-size: 16px;
     color: #666;
 }
 
-/* Footer */
-footer {
-    background-color: #9E2B25;
-    color: white;
-    padding: 10px 0;
-}
-
-/* Mobile-first design: Layar kecil hingga medium */
-@media (min-width: 660px) {
-    .profile-card {
-        padding: 30px;
-        max-width: 600px; /* Ukuran untuk tablet/desktop kecil */
-    }
-
-    .profile-info h2 {
-        text-align: center;
-    }
-}
-
+/* Media Queries for responsiveness */
 @media (min-width: 1000px) {
-    .profile-card {
-        max-width: 900px; /* Ukuran lebih besar untuk desktop */
-        padding: 40px; /* Penambahan padding untuk estetika */
+    .profile-section {
+        flex-direction: row;
+        align-items: flex-start;
     }
 
-    .profile-info h2 {
+    .profile-picture, .profile-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .profile-picture img {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        align-self: center;
+    }
+
+    .profile-info {
+        margin-top: 25px;
         text-align: left;
+        padding: 0 20px;
+    }
+
+    .profile-card {
+        max-width: 900px;
+        padding: 40px;
     }
 }
