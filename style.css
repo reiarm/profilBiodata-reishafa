@@ -1,0 +1,136 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Global layout */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    background-color: #2A4494;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Profile Section */
+.profile-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+    max-width: 90%; /* Ukuran default untuk mobile */
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 20px; /* Jarak antara info profil dan sosial links */
+}
+
+.social-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antar logo */
+}
+
+.social-links a {
+    display: inline-block; /* Agar logo dapat di-hover */
+    transition: transform 0.2s; /* Efek zoom saat di-hover */
+}
+
+.social-links a:hover {
+    transform: scale(1.1); /* Membesarkan logo saat di-hover */
+}
+
+.social-links img {
+    width: 30px; /* Ukuran logo */
+    height: 30px;
+    transition: filter 0.3s; /* Transisi untuk efek filter */
+}
+
+/* Efek hover pada gambar */
+.social-links a:hover img {
+    filter: brightness(0.8); /* Mengubah warna saat di-hover */
+}
+
+.profile-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Gambar profil */
+.profile-picture img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #f3aa51;
+}
+
+/* Info Profil */
+.profile-info {
+    text-align: left;
+    align-content: center;
+    max-width: 400px;
+}
+
+.profile-info h2 {
+    margin: 10px 0;
+    font-size: 24px; /* Ukuran teks yang konsisten */
+    color: #333;
+    text-align: center;
+}
+
+.profile-info p {
+    margin: 5px 0; /* Konsisten pada margin */
+    font-size: 16px;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: #9E2B25;
+    color: white;
+    padding: 10px 0;
+}
+
+/* Mobile-first design: Layar kecil hingga medium */
+@media (min-width: 660px) {
+    .profile-card {
+        padding: 30px;
+        max-width: 600px; /* Ukuran untuk tablet/desktop kecil */
+    }
+
+    .profile-info h2 {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1000px) {
+    .profile-card {
+        max-width: 900px; /* Ukuran lebih besar untuk desktop */
+        padding: 40px; /* Penambahan padding untuk estetika */
+    }
+
+    .profile-info h2 {
+        text-align: left;
+    }
+}
