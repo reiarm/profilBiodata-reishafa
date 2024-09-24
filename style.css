@@ -61,7 +61,7 @@ footer {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .social-links a {
@@ -97,7 +97,7 @@ footer {
 }
 
 /* Media Queries for responsiveness */
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
     .profile-section {
         flex-direction: row;
         align-items: flex-start;
