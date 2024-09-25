@@ -1,3 +1,5 @@
+https://profil-biodata-reishafa.vercel.app/
+
 # Tugas Profil Biodata CGS
 Proyek sederhana yang menampilkan profil biodata idol K-Pop dengan menggunakan HTML dan CSS.
 
